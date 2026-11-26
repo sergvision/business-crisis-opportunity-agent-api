@@ -52,9 +52,9 @@ def test_calculate_scenario():
 
     assert result["available_rooms"] == 420
     assert result["occupied_rooms"] == pytest.approx(281.4)
-    assert result["room_revenue"] == 133665.0
-    assert result["ota_commission"] == 14435.82
-    assert result["net_room_revenue"] == 119229.18
+    assert result["room_revenue"] == pytest.approx(133665.0)
+    assert result["ota_commission"] == pytest.approx(14435.82)
+    assert result["net_room_revenue"] == pytest.approx(119229.18)
 
 
 def test_calculate_financial_impact():
