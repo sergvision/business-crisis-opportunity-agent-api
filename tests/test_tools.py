@@ -1,3 +1,4 @@
+import pytest
 
 from tools import (
     get_business_context,
@@ -50,7 +51,7 @@ def test_calculate_scenario():
     )
 
     assert result["available_rooms"] == 420
-    assert result["occupied_rooms"] == 281.4
+    assert result["occupied_rooms"] == pytest.approx(281.4)
     assert result["room_revenue"] == 133665.0
     assert result["ota_commission"] == 14435.82
     assert result["net_room_revenue"] == 119229.18
