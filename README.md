@@ -96,3 +96,54 @@ This is a controlled portfolio demonstration using simulated business data.
 It does not represent a live enterprise deployment, verified client engagement, or autonomous execution in external business systems.
 
 Strategic recommendations remain subject to human review and approval.
+
+
+## Continuous Integration (CI)
+
+The project includes an automated CI pipeline powered by GitHub Actions.
+
+### CI Workflow
+
+- **Workflow:** Case 06 Automated Tests
+- **Configuration:** `.github/workflows/tests.yml`
+- **Triggers:** Push and pull requests targeting `main`
+- **Runtime:** Ubuntu Latest
+- **Python:** 3.12
+- **Test framework:** pytest
+- **Development dependencies:** `requirements-dev.txt`
+- **Execution command:** `python -m pytest -v`
+
+### Security
+
+The OpenAI API key is provided to the workflow through GitHub Actions repository secrets (`OPENAI_API_KEY`).
+
+Sensitive credentials are not stored in the repository source code.
+
+### Automated Test Coverage
+
+The test suite covers:
+
+- FastAPI root and health endpoints
+- Successful API requests
+- Empty and missing question validation
+- Agent execution error handling
+- Business context and performance data
+- Alternative business scenarios
+- Post-pilot results
+- Scenario calculations
+- Financial impact calculations
+- Financial impact comparisons
+
+### Latest CI Validation
+
+**Status:** PASS
+
+- Tests collected: 13
+- Tests passed: 13
+- Tests failed: 0
+- Test execution time: 0.66 seconds
+- Total GitHub Actions job duration: 14 seconds
+
+The latest successful execution confirms that all 13 automated tests passed in the configured CI environment.
+
+*Validation evidence: GitHub Actions workflow run, 27 November 2026.*
